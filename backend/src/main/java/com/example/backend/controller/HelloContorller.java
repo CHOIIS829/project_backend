@@ -9,18 +9,6 @@ import org.springframework.web.bind.annotation.*;
 public class HelloContorller {
 
     @GetMapping("/test")
-    public String getData() {
-        return "hello world!!!";
-    }
-
-    @PostMapping("/test")
-    public Boolean postData(@RequestBody String val) {
-        log.info(val);
-        return val != null;
-    }
-
-
-    @GetMapping("/test")
     public String get(){
         return "response Get!";
     }
