@@ -15,10 +15,8 @@ public class HelloContorller {
 
     @PostMapping("/test")
     public Boolean postData(@RequestBody String val) {
-        log.info(val);
         return val != null;
     }
-
 
     @GetMapping("/test")
     public String get(){
