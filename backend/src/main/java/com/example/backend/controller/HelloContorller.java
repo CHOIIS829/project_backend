@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 public class HelloContorller {
 
     @GetMapping("/test")
+<<<<<<< HEAD
     public String getData() {
         return "hello world!!!";
     }
@@ -19,6 +20,8 @@ public class HelloContorller {
     }
 
     @GetMapping("/test")
+=======
+>>>>>>> f78289af1e8ce97ce5155eae13af323f990786d1
     public String get(){
         return "response Get!";
     }
