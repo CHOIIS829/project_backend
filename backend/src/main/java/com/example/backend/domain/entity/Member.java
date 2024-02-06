@@ -17,13 +17,13 @@ public class Member {
     @Column(name = "member_no")
     private Long memberNo;
 
-    @Column(name = "member_id")
+    @Column(name = "member_id", nullable = false)
     private String memberId;
 
-    @Column(name = "member_pwd")
+    @Column(name = "member_pwd", nullable = false)
     private String memberPwd;
 
-    @Column(name = "member_name")
+    @Column(name = "member_name", nullable = false)
     private String memberName;
 
     @Column(name = "email")
