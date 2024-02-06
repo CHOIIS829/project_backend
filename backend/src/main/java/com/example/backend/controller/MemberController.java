@@ -17,8 +17,8 @@ public class MemberController {
 
     private final MemberService memberService;
 
-    @PostMapping("/singup")
-    public ResponseEntity<String> singUp(@RequestBody Member m){
+    @PostMapping("/signup")
+    public ResponseEntity<String> signUp(@RequestBody Member m){
         try {
             Member saveMember = memberService.signUp(m);
             return new ResponseEntity<>("회원가입 성공", HttpStatus.CREATED);
