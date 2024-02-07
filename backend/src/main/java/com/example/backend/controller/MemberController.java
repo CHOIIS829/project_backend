@@ -1,5 +1,6 @@
 package com.example.backend.controller;
 
+import com.example.backend.domain.dto.LoginRequestDto;
 import com.example.backend.domain.entity.Member;
 import com.example.backend.service.MemberService;
 import lombok.RequiredArgsConstructor;
@@ -24,6 +25,17 @@ public class MemberController {
             return new ResponseEntity<>("회원가입 성공", HttpStatus.CREATED);
         }catch (Exception e){
             return new ResponseEntity<>("회원가입 실패", HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @PostMapping
+    public ResponseEntity<Member> logIn(@RequestBody LoginRequestDto loginRequestDto) {
+        Member member = null;
+        try {
+            member = memberService.login(loginRequestDto);
+            return new ResponseEntity<>(member, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(member, HttpStatus.BAD_REQUEST);
         }
     }
 }
